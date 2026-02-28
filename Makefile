@@ -5,11 +5,11 @@ OBJ = palindrome.o
 
 all: $(OBJ)
 
-palindrome.o: palindrome.c palindrome.h
-	$(CC) $(CFLAGS) -c palindrome.c -o palindrome.o
+palindrome.o: src/palindrome.c src/palindrome.h
+	$(CC) $(CFLAGS) -c src/palindrome.c -o palindrome.o
 
 test: all
-	@echo "Build successful. Tests will be run by the grader."
+	@echo "Build successful. Tests are executed by the grader."
 
 clean:
 	rm -f *.o
