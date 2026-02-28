@@ -2,6 +2,26 @@
 
 int check_if_palindrome(const char *str)
 {
-    // TODO: Implement palindrome logic
-    return 0;
+    const char *left = str;
+    const char *right = str;
+
+    while (*right != '\0') {
+        right++;
+    }
+
+    if (right == left) {
+        return 1;
+    }
+
+    right--;
+
+    while (left < right) {
+        if (*left != *right) {
+            return 0;
+        }
+        left++;
+        right--;
+    }
+
+    return 1;
 }
